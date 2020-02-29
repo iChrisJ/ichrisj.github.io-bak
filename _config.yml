@@ -28,26 +28,18 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Social accounts
-twitter_username: #
-facebook_username: 
 github_username: ichrisj
 email: ichris.jiang@gmail.com
+twitter_username: #
+facebook_username: 
 weibo_username: 
 zhihu_username: 
 linkedIn_username:
-dribbble_username:
-
-description_footer: #本站记录我前端之旅的沿途风景！
 
 # Build settings
 # theme: minima
 plugins:
   - jekyll-feed
-
-# comments
-# two ways to comment, only choose one, and use your own short name
-duoshuo_shortname: #hygblog
-disqus_shortname: #gaohaoyang
 
 # statistic analysis 统计代码
 # 百度统计 id，将统计代码替换为自己的百度统计id，即
@@ -57,7 +49,7 @@ baidu_tongji_id: #cf8506e0ef223e57ff6239944e5d46a4
 google_analytics_id: #UA-72449510-4 # google 分析追踪id
 
 # Build settings
-#markdown: kramdown
+markdown: kramdown
 
 # Markdown settings
 # replace redcarpet to kramdown,
@@ -68,19 +60,19 @@ highlighter: rouge
 kramdown:
   input: GFM  # use Github Flavored Markdown !important
 
-## 评论系统
+## Comment Engines
 # Disqus（https://disqus.com/）
-disqus_username: #ichrisj
+disqus_username: # ichrisj
 
 # Gitalk
 gitalk:
   enable: true    #是否开启Gitalk评论
-  clientID: 5db7c9742d279895f1fb                          #生成的clientID
+  clientID: 5db7c9742d279895f1fb    #生成的clientID
   clientSecret: 4d66d2cacadb747bc9873fa780751217364d4f90    #生成的clientSecret
-  repo: ichrisj.github.io    #仓库名称
+  repo: ichrisj.github.io   #仓库名称
   owner: ichrisj    #github用户名
   admin: ichrisj
-  distractionFreeMode: true #是否启用类似FB的阴影遮罩
+  distractionFreeMode: true   #是否启用类似FB的阴影遮罩
 
 # url
 category_dir: category/
