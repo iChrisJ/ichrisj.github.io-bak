@@ -18,22 +18,61 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: alpha c
-brief-intro: Time in tea
-email: your-email@example.com
+title: ALPHA C
+brief-intro: Time with tea~~
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+
+# Social accounts
+twitter_username: #
+facebook_username: 
+github_username: ichrisj
+email: ichris.jiang@gmail.com
+weibo_username: 
+zhihu_username: 
+linkedIn_username:
+dribbble_username:
+
+description_footer: #本站记录我前端之旅的沿途风景！
 
 # Build settings
-theme: minima
+# theme: minima
 plugins:
   - jekyll-feed
+
+# comments
+# two ways to comment, only choose one, and use your own short name
+duoshuo_shortname: #hygblog
+disqus_shortname: #gaohaoyang
+
+# statistic analysis 统计代码
+# 百度统计 id，将统计代码替换为自己的百度统计id，即
+# hm.src = "//hm.baidu.com/hm.js?xxxxxxxxxxxx";
+# xxxxx字符串
+baidu_tongji_id: #cf8506e0ef223e57ff6239944e5d46a4
+google_analytics_id: #UA-72449510-4 # google 分析追踪id
+
+# Build settings
+#markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# url
+category_dir: category/
+tag_dir: tag/
+
+# excerpt
+excerpt_separator: "\n\n"
+
+# paginate
+plugins: [jekyll-paginate]
+paginate: 6
 
 # Exclude from processing.
 # The following items will not be processed, by default.
