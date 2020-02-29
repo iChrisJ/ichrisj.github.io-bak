@@ -1,7 +1,6 @@
 ---
 layout:     post
 title:      Azure AD Authentication with CRM
-subtitle:   
 date:       2019-05-20
 author:     alphac
 header-img: 
@@ -22,7 +21,7 @@ Go to https://portal.azure.com and log on as Global Administrator, navigate to *
 - *Redirect URL (optional)*: choose "Web" and set "https://localhost:1234". We can update it later if needed.
 
 On the following app overview page, copy and store the *Application (client) ID*, we will use it later.
-![clientid](/img/Azure-AD-Authentication-with-CRM/clientid.jpg)
+![clientid](https://alphacland.blob.core.windows.net/landimages/clientid.jpg)
 
 ### Create Client Secret
 
@@ -31,7 +30,7 @@ On the Application page, move to **Certificate & secrets** tab, click **New clie
 ### Add CRM API Permission
 
 Navigate to **API permissions**, click **Add a permission** button and choose **Dynamics CRM** tile, toggle the "user_impersonation", click "Add permission", then click **Grant admin consent for xxxx**
-![apipermission](/img/Azure-AD-Authentication-with-CRM/apipermission.jpg)
+![apipermission](https://alphacland.blob.core.windows.net/landimages/apipermission.jpg)
 
 
 ### Create an Application User
@@ -42,7 +41,7 @@ Go to your CRM orgainzation, navigate to Settings -> Security -> Users, switch t
 
 Let's use the basic Web Request to acquire the token and fetch data from CRM.
 
-```C#
+{% highlight C# %}
 using System;
 using System.IO;
 using System.Net;
@@ -134,7 +133,7 @@ namespace DemoConsole
 		}
 	}
 }
-```
+{% endhighlight %}
 
 ## Use PostMan to Fetch CRM Data
 
@@ -142,7 +141,7 @@ Now let's try to use PostMan to get data from CRM organization.
 
 1. Open a new tab in PostMan and set value of URL eg: GET https://<-orgname->.api.crm5.dynamics.com/api/data/v9.1/contacts 
 2. Select the *Authorization* tab, set the Type to *OAuth 2.0* and click on "Get New Access Token" button 
-![postmanauth](/img/Azure-AD-Authentication-with-CRM/postmanauth.jpg)
+![postmanauth](https://alphacland.blob.core.windows.net/landimages/postmanauth.jpg)
 3. Set The following values in the Get New Access Token dialog
  - Token Name: <Any Name is OK>
  - Grant Type: Authorization Code
@@ -151,7 +150,7 @@ Now let's try to use PostMan to get data from CRM organization.
  - Access Token URL: https://login.microsoftonline.com/common/oauth2/token
  - Client ID: *Application (client) ID* we copy and stored previously.
  - Client Secret: client secret we created and stored previously. 
-![new access token](/img/Azure-AD-Authentication-with-CRM/newtoken.jpg)
+![new access token](https://alphacland.blob.core.windows.net/landimages/newtoken.jpg)
 
  - Click "Request Token" to get the token. Once get the token, scroll down to click "Use Token"
 4. Click "Send" to send the request to restrieve data from CRM.
@@ -160,3 +159,6 @@ Now let's try to use PostMan to get data from CRM organization.
 
 https://danishnaglekar.wordpress.com/2019/03/10/azure-ad-authentication-with-dynamics-crm/
 https://alexanderdevelopment.net/post/2018/05/28/using-dynamics-365-virtual-entities-to-show-data-from-an-external-organization/
+
+* content
+{:toc}

@@ -101,4 +101,5 @@ Add/update this site setting to make Portal set AD FS as default sign in channel
 2. In AD FS Management tool, make sure the "Windows Authentication" is ticked for Intranet.
     > to find "Windows Authentication" in the AD FS Management tool, go to **Authentication Policies** &gt;**Primary Authentication** &gt; **Global Setting** &gt; Edit &gt; Intranet section
 
- 
+ * content
+{:toc}

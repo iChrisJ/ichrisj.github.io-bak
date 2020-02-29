@@ -59,9 +59,19 @@ google_analytics_id: #UA-72449510-4 # google 分析追踪id
 # Build settings
 #markdown: kramdown
 
+# Markdown settings
+# replace redcarpet to kramdown,
+# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
+# document: http://jekyllrb.com/docs/configuration/#kramdown
+markdown: kramdown
+highlighter: rouge
 kramdown:
-  input: GFM
-  syntax_highlighter: rouge
+  input: GFM  # use Github Flavored Markdown !important
+
+## 评论系统
+# Disqus（https://disqus.com/）
+disqus_username: ichrisj
+
 
 # url
 category_dir: category/
